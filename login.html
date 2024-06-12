@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Cửa Hàng Gà Rán KFC | KFC Việt Nam</title>
+    <link rel="icon" href="./assets/favicon/icons8-kfc-chicken-16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=".//intro/assets/font/themify-icons/themify-icons.css">
+    <script>
+        function login() {
+          // Lấy giá trị tên người dùng và mật khẩu từ các trường input
+          var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+    
+          // Kiểm tra tên người dùng và mật khẩu
+          // Trong ví dụ này, kiểm tra đơn giản là tên người dùng là "admin" và mật khẩu là "password"
+          if (username === "letmeluvu" && password === "12345") {
+            // Đăng nhập thành công, tạo cookie lưu trữ thông tin đăng nhập trong 30 ngày
+            document.cookie = "username=" + username + "; expires=" + new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString() + "; path=/";
+    
+            // Chuyển hướng đến trang đã đăng nhập thành công
+            window.location.href = "index6.html";
+          } else {
+            // Đăng nhập thất bại, hiển thị thông báo lỗi
+            alert("Tên người dùng hoặc mật khẩu không chính xác.");
+          }
+        }
+      </script>
+    <style>
+        .gg-map {
+           margin: 0px 126px;
+           padding: 0 15px;
+           height: 800px;
+           position: relative;
+        }
+        .auth-form1, .auth-form{
+        width: 45%;
+        display: inline-block;
+         }
+         .auth-form1{
+            margin-top: 100px;
+            margin-right: 50px;
+            height: 700px;
+         }
+         .auth-form{
+            position: absolute;
+            /* padding-bottom: 200px; */
+         }
+         .auth-form__header{
+            text-transform: uppercase;
+            padding-top: 58px;
+            padding-bottom: 25px;
+            box-sizing: border-box;
+            color: rgb(32, 33, 36);
+            display: block;
+            font-family: Oswald, sans-serif;
+            font-size: 28px;
+            font-weight: 1000;
+            line-height: 38px;
+            margin-block-end: 20px;
+            margin-block-start: 0px;
+            margin-bottom: 0px;
+         }
+        .auth-form__group{
+     padding-bottom: 15px ;
+    }
+    .auth-form__aside{
+        padding: 10px 5px;
+        
+    }
+    .auth-form__input{
+        border: none;
+        border-bottom: 1px solid #ccc;
+        width: 100%; /* Đảm bảo input chiếm toàn bộ không gian có sẵn */
+        padding: 10px; /* Khoảng cách giữa nội dung và viền của input */
+        font-family: Arial, sans-serif; /* Phông chữ của input */
+        font-size: 14px; /* Kích thước phông chữ của input */
+        color: #333; /* Màu phông chữ của input */
+    }
+    .auth-form__input:focus {
+     outline: none; /* Loại bỏ đường viền khi input được focus */
+     box-shadow: 0 0 5px #b4d5ff; /* Hiệu ứng bóng khi input được focus */
+     }
+     /* .auth-form__policy-text{
+        padding-top: 10px;
+     } */
+     .auth-form__controls{
+        padding-top: 20px;
+        padding-bottom: 15px;
+        text-align: center;
+        bottom: 200px;
+     }
+     .auth-form__controls .btn{
+        padding-bottom: 5px;
+        text-align: center;
+     }
+     .registion{
+        padding-top: 20px;
+        text-align: center;
+     }
+     .auth-form__policy-link{
+        cursor: pointer;
+        float: inline-end;
+        padding-bottom: 30px;
+     }
+     .dangnhap{
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+     }
+     .btn{
+         /* display: inline-block;
+         padding: 5px 20px; 
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        width: 470px; 
+         height: auto; 
+        border-radius: 50px;
+         border: none;
+        color: #ffffff;
+        background-color: rgb(40, 167, 69);
+        cursor: pointer; 
+           */
+        align-items: flex-start;
+        appearance: button;
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgb(40, 167, 69);
+background-image: none;
+background-origin: padding-box;
+background-position-x: 0%;
+background-position-y: 0%;
+background-repeat: repeat;
+background-size: auto;
+border-bottom-color: rgb(40, 167, 69);
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+border-bottom-style: solid;
+border-bottom-width: 0.8px;
+border-image-outset: 0;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(40, 167, 69);
+border-left-style: solid;
+border-left-width: 0.8px;
+border-right-color: rgb(40, 167, 69);
+border-right-style: solid;
+border-right-width: 0.8px;
+border-top-color: rgb(40, 167, 69);
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+border-top-style: solid;
+border-top-width: 0.8px;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+cursor: pointer;
+display: inline-block;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-feature-settings: normal;
+font-kerning: auto;
+font-optical-sizing: auto;
+font-size: 15px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+font-variation-settings: normal;
+font-weight: 700;
+height: 46.9125px;
+letter-spacing: normal;
+line-height: 20px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+min-width: 64px;
+outline-color: rgb(255, 255, 255);
+outline-style: none;
+outline-width: 0px;
+overflow-x: visible;
+overflow-y: visible;
+padding-block-end: 12px;
+padding-block-start: 12px;
+padding-bottom: 12px;
+padding-inline-end: 2px;
+padding-inline-start: 2px;
+padding-left: 2px;
+padding-right: 2px;
+padding-top: 12px;
+position: relative;
+text-align: center;
+text-decoration-color: rgb(255, 255, 255);
+text-decoration-line: none;
+text-decoration-style: solid;
+text-decoration-thickness: auto;
+text-indent: 0px;
+text-rendering: auto;
+text-shadow: none;
+text-size-adjust: 100%;
+text-transform: none;
+text-wrap: nowrap;
+transform: matrix(1, 0, 0, 1, 0, 0);
+transition-behavior: normal, normal;
+transition-delay: 0s, 0s;
+transition-duration: 0.4s, 0.28s;
+transition-property: background, box-shadow;
+transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1), cubic-bezier(0.4, 0, 0.2, 1);
+user-select: none;
+vertical-align: baseline;
+white-space-collapse: collapse;
+width: 520px;
+word-spacing: 0px;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+-webkit-border-image: none;
+     }
+     .btn:hover {
+        background-color: #757575;
+}
+
+     .btn:active {
+        background-color: black;
+}
+#btn1{
+    align-items: flex-start;
+    appearance: button;
+  background-color: rgb(59, 89, 152);
+  border-bottom-color: rgb(59, 89, 152);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-style: solid;
+  border-bottom-width: 0.8px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(59, 89, 152);
+  border-left-style: solid;
+  border-left-width: 0.8px;
+  border-right-color: rgb(59, 89, 152);
+  border-right-style: solid;
+  border-right-width: 0.8px;
+  border-top-color: rgb(59, 89, 152);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-style: solid;
+  border-top-width: 0.8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 700;
+  height: 50.6px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  min-width: 64px;
+  outline-color: rgb(255, 255, 255);
+  outline-style: none;
+  outline-width: 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-block-end: 12px;
+  padding-block-start: 12px;
+  padding-bottom: 12px;
+  padding-inline-end: 2px;
+  padding-inline-start: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 12px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: none;
+  text-wrap: nowrap;
+  user-select: none;
+  vertical-align: baseline;
+  white-space-collapse: collapse;
+  width: 520px;
+  word-spacing: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-border-image: none;
+  top: 83px;
+}
+#btn1:hover {
+        background-color: #757575;
+}
+
+     #btn1:active {
+        background-color: black;
+}
+#btn2{
+    align-items: flex-start;
+    appearance: button;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgb(0, 0, 0);
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: auto;
+  border-bottom-color: rgb(0, 0, 0);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-style: solid;
+  border-bottom-width: 0.8px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(0, 0, 0);
+  border-left-style: solid;
+  border-left-width: 0.8px;
+  border-right-color: rgb(0, 0, 0);
+  border-right-style: solid;
+  border-right-width: 0.8px;
+  border-top-color: rgb(0, 0, 0);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-style: solid;
+  border-top-width: 0.8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 700;
+  height: 51.6px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  min-width: 64px;
+  outline-color: rgb(255, 255, 255);
+  outline-style: none;
+  outline-width: 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-block-end: 12px;
+  padding-block-start: 12px;
+  padding-bottom: 12px;
+  padding-inline-end: 2px;
+  padding-inline-start: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 12px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: none;
+  text-wrap: nowrap;
+  user-select: none;
+  vertical-align: baseline;
+  white-space-collapse: collapse;
+  width: 520px;
+  word-spacing: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-border-image: none;
+  top: 45px;
+}
+#btn2:hover {
+        background-color: #757575;
+}
+
+     #btn2:active {
+        background-color: black;
+}
+#btn3{
+    align-items: flex-start;
+    appearance: button;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: red;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-size: auto;
+  border-bottom-color: red;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-style: solid;
+  border-bottom-width: 0.8px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: red;
+  border-left-style: solid;
+  border-left-width: 0.8px;
+  border-right-color: red;
+  border-right-style: solid;
+  border-right-width: 0.8px;
+  border-top-color: red;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-style: solid;
+  border-top-width: 0.8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 0px, rgba(0, 0, 0, 0.14) 0px 0px 0px 0px, rgba(0, 0, 0, 0.12) 0px 0px 0px 0px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 700;
+  height: 51.6px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 5px;
+  min-width: 64px;
+  outline-color: rgb(255, 255, 255);
+  outline-style: none;
+  outline-width: 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-block-end: 12px;
+  padding-block-start: 12px;
+  padding-bottom: 12px;
+  padding-inline-end: 2px;
+  padding-inline-start: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 5px;
+  position: relative;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: none;
+  text-wrap: nowrap;
+  user-select: none;
+  vertical-align: baseline;
+  white-space-collapse: collapse;
+  width: 520px;
+  word-spacing: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-border-image: none;
+}
+#btn3:hover {
+        background-color: #757575;
+}
+
+     #btn3:active {
+        background-color: black;
+}
+.diff{
+    top: 100px;
+    /* bottom: 100px; */
+
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav">
+            <div class="nav-left">
+                <a href="./index.html" class="logo"></a>
+
+                <ul>
+                    <li><a href="./index2.html">Thực đơn</a></li>
+                    <li><a href="./index2.html">Khuyến mãi</a></li>
+                    <li><a href="#">Dịch vụ tiệc</a></li>
+                    <li><a href="#">Hệ thống nhà hàng</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <div class="right-btn">
+                    <a href="#" id="btn-start">
+                        <span>Bắt đầu đặt hàng</span>
+                    </a>
+                </div>
+
+                <div id="lang-option">
+                    <a href="#">English</a>
+                </div>
+
+                <ul class="nav-right-icon">
+                    <li><a href="#" class="right-icon">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </a></li>
+
+                    <li><a href="./index3.html" class="right-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a></li>
+
+                    <li><a href="#" class="right-icon">
+                            <i class="fa-solid fa-bars"></i>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+   <div class="gg-map">
+
+        <img src="/assets/img/login/signin.jpg" alt="" class="auth-form1">
+
+         <!-- Authen form -->
+  <div class="auth-form">
+    <div class="auth-form__header">
+        <h1 class="auth-form__header">ĐĂNG NHẬP</h1>
+        <!-- <span class="auth-form__switch-btn">Đăng Nhập</span> -->
+    </div>
+    <div class="auth-form__form">
+      <div class="auth-form__group">
+        <input type="text" id="username" class="auth-form__input" placeholder="Địa chỉ email của bạn *" >
+      </div>
+      <div class="auth-form__group">
+        <input type="password" id="password" class="auth-form__input" placeholder="Mật khẩu *">
+      </div>
+    </div>
+    <!-- <label for="username">Tên người dùng:</label>
+  <input type="text" id="username" name="username" required><br><br>
+  <label for="password">Mật khẩu:</label>
+  <input type="password" id="password" name="password" required><br><br>
+  <button onclick="login()">Đăng nhập</button> -->
+        <a href="/intro/assets/img/meme-ai-biet-gi-dau-hai-huoc_105004223.png" class="auth-form__policy-link">Bạn quên mật khẩu?</a>
+
+    <div class="auth-form__controls">
+      <!-- <button class="btn">Tạo Tài Khoản</button> -->
+      <input onclick="login()" class="btn" type="submit" value="Đăng nhập">
+    </div>
+    <h3 class="diff">Hoặc tiếp tục với</h3>
+    <div class="auth-form__controls">
+        
+        <input id="btn1" type="submit" value="Đăng nhập bằng facebook">
+        <!-- <input class="btn" type="submit" value="Đăng nhập">
+        <input class="btn" type="submit" value="Đăng nhập"> -->
+      </div>
+      <div class="auth-form__controls">
+        <input id="btn2" type="submit" value="Đăng nhập bằng apple">
+        <!-- <input class="btn" type="submit" value="Đăng nhập">
+        <input class="btn" type="submit" value="Đăng nhập"> -->
+      </div>
+      <div class="auth-form__controls">
+        <input id="btn3" type="submit" value="Đăng nhập bằng google">
+        <!-- <input class="btn" type="submit" value="Đăng nhập">
+        <input class="btn" type="submit" value="Đăng nhập"> -->
+      </div>
+    <div class="registion">
+      Bạn chưa có tài khoản? <a href="/registration.html" class="dangnhap">Đăng ký</a>
+    </div>
+    </div>
+</div>
+    <footer class="footer">
+        <div class="container">
+            <div id="list-card">
+                <div class="item-card">
+                    <div class="header-card">
+                        <h6>Danh Mục Món Ăn</h6>
+                    </div>
+                    <div class="body-card hoa">
+                        <ul>
+                            <li><a href="index2.html?call=2">Món mới</a></li>
+                            <li><a href="index2.html?call=3">Combo 1 người</a></li>
+                            <li><a href="index2.html?call=4">Combo 1 nhóm</a></li>
+                            <li><a href="index2.html?call=5">Gà rán - gà quay</a></li>
+                            <li><a href="index2.html?call=6">burger - cơm - mì ý</a></li>
+                            <li><a href="index2.html?call=7">thức ăn nhẹ</a></li>
+                            <li><a href="index2.html?call=8">thức uống & tráng miệng</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="header-card">
+                        <h6>
+                            Về KFC
+                        </h6>
+                    </div>
+                    <div class="body-card">
+                        <ul>
+                            <li><a href="#">Câu Chuyện Của Chúng Tôi</a></li>
+                            <li><a href="#">Tin Khuyến Mãi</a></li>
+                            <li><a href="#">Tin tức KFC</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Đặc tiệc sinh nhật</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="header-card">
+                        <h6>
+                            Liên hệ KFC
+                        </h6>
+                    </div>
+                    <div class="body-card">
+                        <ul>
+                            <li><a href="#">Theo dõi đơn hàng</a></li>
+                            <li><a href="#">Hệ Thống Nhà Hàng</a></li>
+                            <li><a href="#">Liên hệ KFC</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="header-card">
+                        <h6>
+                            Chính sách
+                        </h6>
+                    </div>
+                    <div class="body-card">
+                        <ul>
+                            <li><a href="#">Chính sách hoạt động</a></li>
+                            <li><a href="#">Chính sách và quy định</a></li>
+                            <li><a href="#">Chính sách bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="item-card mar">
+                    <div class="header-card">
+                        <h6 class="padd-6">
+                            Download App
+                        </h6>
+                    </div>
+
+                    <div class="footer-dow">
+                        <a href="https://apps.apple.com/vn/app/kfc-vietnam/id562164615?l=en" class="icon-dow">
+                            <img src="./assets/img/logo_appstore.png">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=kfc.vietnam&hl=en" class="icon-dow">
+                            <img src="./assets/img/logo_playstore.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-link">
+                <p class="copy">
+                    Copyright © 2023 KFC Vietnam
+                </p>
+
+                <div class="footer-app">
+                    <a href="https://www.facebook.com/KFCVietnam/" class="footer-icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/KFCVietnam2011" class="footer-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kfc_vietnam/" class="footer-icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://twitter.com/kfc_vietnam" class="footer-icon">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer-end">
+                <div class="end-left">
+                    <h2>
+                        CÔNG TY LIÊN DOANH TNHH KFC VIỆT NAM
+                    </h2>
+
+                    <div>
+                        Số 292 Bà Triệu, P. Lê Đại Hành, Q. Hai Bà Trưng, TP. Hà Nội.
+                    </div>
+                    <div>
+                        Điện thoại: (028) 38489828
+                    </div>
+                    <div>
+                        Email: lienhe@kfcvietnam.com.vn
+                    </div>
+                    <div>
+                        Mã số thuế: 0100773885
+                    </div>
+                    <div>
+                        Ngày cấp: 29/10/1998 - Nơi cấp: Cục Thuế Thành Phố Hà Nội
+                    </div>
+                </div>
+
+                <div class="end-right">
+                    <a href="#" class="BoCongT">
+                        <img src="./assets/img/logo_footer.png" class="logo-footer">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+.wid-100
+{
+    min-width: 1200px;
+}
+
+.wid-100 ul
+{
+    position: absolute;
+    right: 0;
+}
+
+.gio-hang
+{
+    margin-top: 72px;
+    position: relative;
+    padding: 35px 15px 40px;
+}
+
+.gio-content
+{
+    background-size: auto;
+    padding: 45px 55px;
+    height: 590px;
+    align-items: center;
+    display: flex;
+    background: url(https://static.kfcvietnam.com.vn/images/web/empty-cart.png?v=5.0) no-repeat #f8f7f5 bottom;
+    background-position: right 20px top 20px;
+
+}
+
+.gio-hang:before{  
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 8px;
+    height: 22px;
+    box-shadow: inset 0 0 0 32px #e4002b, -16px 0 #e4002b, 16px 0 #e4002b;
+}
+
+header
+{
+    border-bottom: solid 1px #ababab;
+    height: 72px;
+}
+
+.gio-hang h2, .gio-hang h1
+{
+    font-family: 'Oswald',sans-serif;
+}
+
+#back-menu
+{
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 550;
+    width: 160px;
+    height: 47px;
+    border-radius: 30px;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gio-hang h1{
+    margin-bottom: 15px;
+}
+
+.gio-hang h2
+{
+    width: 390px;
+    font-size: 44px;
+    letter-spacing: 1.5px;
+    line-height: 48px;
+    padding-bottom: 40px;
+}
+
+.logo-kfc
+{
+    position: absolute;
+    background: url(https://static.kfcvietnam.com.vn/images/web/kfc-logo-mobile.svg?v=5.0) no-repeat;
+    width: 90px;
+    height: 30px;
+    left: 45%;
+}

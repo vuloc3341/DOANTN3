@@ -1,0 +1,176 @@
+
+.padd-10
+{
+    padding: 5px;
+    flex: 0 0 23.3%;
+    position: relative;
+}
+
+.color
+{
+    color: black
+}
+
+.bor-n
+{
+    border: none;
+    padding-top: 0;
+}
+
+.mar-left
+{
+    text-align: right;
+    width: 110px;
+}
+
+.padd-bot
+{
+   padding-bottom: 50px;
+}
+
+.category-wrapper
+{
+    padding-top: 8px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 102px;
+    z-index: 1;
+    background-color: white;
+}
+
+
+.position-relative
+{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.position-relative li
+{
+    margin: 0 30px;
+    display: inline-block;
+}
+
+.position-relative li a
+{
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(0,0,0,.5);
+    display: inline-block;
+    line-height: 37px;
+    text-transform: uppercase;
+    padding-top: 2px;
+    letter-spacing: 1px;
+}
+
+.position-relative li a:hover
+{
+    color: black;
+}
+
+.position-relative ul
+{
+    list-style: none;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+    transition: left 0.5s ease-in-out;
+    text-align: center;
+    overflow-x: auto; 
+}
+
+.btn-chung
+{
+    position: absolute;
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    top: 12%;
+}
+
+#prev-btn
+{
+    padding: 10px 10px 10px 0;
+    left: 9%;
+}
+
+#next-btn
+{
+    padding: 10px 0 10px 10px;
+    right: 9%;
+}
+
+.content-2 h1
+{
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+
+}
+
+.sub-content2
+{
+    margin: 0 -10px 42px;
+}
+
+.pgg
+{
+    text-decoration: line-through;
+    color: #707070;
+}
+
+.content-eats
+{
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.pos-abs
+{
+    position: absolute;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 25px;
+    color: white;
+    background: #ccc;
+    width: 90%;
+    text-align: center;
+    height: 45px;
+    white-space: nowrap;
+    padding-top: 12.5px;
+}
+
+.btn-a
+{
+    position: absolute;
+    padding: 0 15px 15px 15px;
+    width: 100%;
+    left: 0;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#backtop
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    cursor: pointer;
+}

@@ -1,0 +1,118 @@
+header {
+    border: none !important;
+}
+
+.bet {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+.wid {
+    height: 145px;
+}
+
+header {
+    height: 58px;
+    border: none;
+}
+
+.logo-kfc {
+    background: url(https://static.kfcvietnam.com.vn/images/web/kfc-logo-mobile.svg?v=5.0) no-repeat;
+    width: 90px;
+    height: 30px;
+}
+
+#dathag {
+    background-image: url(/assets/img/localization-bg.jpg);
+    margin-top: 72px;
+    background-size: cover;
+    height: 526px;
+    vertical-align: middle;
+}
+
+#bao-dathang {
+    width: 100%;
+    height: 100%;
+    padding: 30px 15px 66px;
+}
+
+#bk-dathang {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bk-dathang h1 {
+    text-shadow: 0 1px 12px rgba(0, 0, 0, .8);
+    margin-bottom: 20px;
+}
+
+#bk-dathang {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-align: center;
+
+}
+
+#menu-dathang {
+    background-color: white;
+    box-shadow: 0 20px 22px 0 rgba(0, 0, 0, .3);
+    position: relative;
+}
+
+#menu-dathang ul {
+    display: flex;
+    width: 100%;
+}
+
+#menu-dathang ul li {
+    width: 50%;
+}
+
+#menu-dathang ul a {
+    font-size: 21px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    color: #454545;
+    width: 100%;
+    display: block;
+}
+
+#content-dathang {
+    height: 180px;
+    text-align: center;
+}
+
+#btn-dathang {
+    position: absolute;
+    background-color: red;
+    width: 90%;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+    bottom: 110px;
+}
+
+#ip-dathang {
+    position: absolute;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+    bottom: 40px;
+    padding: 5px;
+}
+
+#content-dathang a {
+    color: white;
+    font-size: 17px;
+}
